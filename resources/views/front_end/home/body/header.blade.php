@@ -167,37 +167,46 @@
                             <div class="header-action-icon-2">
                                 <a href="page-account.html">
                                     <img class="svgInject" alt="Nest"
-                                        src="assets/imgs/theme/icons/icon-user.svg" />
+                                        src="{{ asset('front_end_assets/imgs/theme/icons/icon-user.svg') }}" />
                                 </a>
-                                <a href="page-account.html"><span class="lable ml-0">Account</span></a>
-                                <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
-                                    <ul>
-                                        <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>My
-                                                Account</a>
-                                        </li>
-                                        <li>
-                                            <a href="page-account.html"><i
-                                                    class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a>
-                                        </li>
-                                        <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-label mr-10"></i>My
-                                                Voucher</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-wishlist.html"><i class="fi fi-rs-heart mr-10"></i>My
-                                                Wishlist</a>
-                                        </li>
-                                        <li>
-                                            <a href="page-account.html"><i
-                                                    class="fi fi-rs-settings-sliders mr-10"></i>Setting</a>
-                                        </li>
-                                        <li>
-                                            <a href="page-login.html"><i class="fi fi-rs-sign-out mr-10"></i>Sign
-                                                out</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                @auth
+                                    <a href="page-account.html"><span class="lable ml-0">Account</span></a>
+                                    <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
+                                        <ul>
+                                            <li>
+                                                <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>My
+                                                    Account</a>
+                                            </li>
+                                            <li>
+                                                <a href="page-account.html"><i
+                                                        class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a>
+                                            </li>
+                                            <li>
+                                                <a href="page-account.html"><i class="fi fi-rs-label mr-10"></i>My
+                                                    Voucher</a>
+                                            </li>
+                                            <li>
+                                                <a href="shop-wishlist.html"><i class="fi fi-rs-heart mr-10"></i>My
+                                                    Wishlist</a>
+                                            </li>
+                                            <li>
+                                                <a href="page-account.html"><i
+                                                        class="fi fi-rs-settings-sliders mr-10"></i>Setting</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="{{ route('user.logout') }}"><i
+                                                        class="fi fi-rs-sign-out mr-10"></i>Sign
+                                                    out</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                @else
+                                    <a href="{{ route('login') }}"><span class="lable ml-0">Login | </span></a>
+
+                                    <a href="{{ route('register') }}"><span class="lable ml-1">Register</span></a>
+                                @endauth
+
                             </div>
                         </div>
                     </div>
@@ -305,8 +314,8 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="more_categories"><span class="icon"></span> <span
-                                    class="heading-sm-1">Show more...</span></div>
+                            <div class="more_categories"><span class="icon"></span> <span class="heading-sm-1">Show
+                                    more...</span></div>
                         </div>
                     </div>
                     <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
@@ -410,8 +419,7 @@
                                         <li class="sub-mega-menu sub-mega-menu-width-34">
                                             <div class="menu-banner-wrap">
                                                 <a href="shop-product-right.html"><img
-                                                        src="assets/imgs/banner/banner-menu.png"
-                                                        alt="Nest" /></a>
+                                                        src="assets/imgs/banner/banner-menu.png" alt="Nest" /></a>
                                                 <div class="menu-banner-content">
                                                     <h4>Hot deals</h4>
                                                     <h3>
@@ -478,8 +486,7 @@
 
 
                 <div class="hotline d-none d-lg-flex">
-                    <img src="{{ asset('front_end_assets/imgs/theme/icons/icon-headphone.svg') }}"
-                        alt="hotline" />
+                    <img src="{{ asset('front_end_assets/imgs/theme/icons/icon-headphone.svg') }}" alt="hotline" />
                     <p>1900 - 888<span>24/7 Support Center</span></p>
                 </div>
                 <div class="header-action-icon-2 d-block d-lg-none">
@@ -708,11 +715,9 @@
             </div>
             <div class="mobile-social-icon mb-50">
                 <h6 class="mb-15">Follow Us</h6>
-                <a href="#"><img
-                        src="{{ asset('front_end_assets/imgs/theme/icons/icon-facebook-white.svg') }}"
+                <a href="#"><img src="{{ asset('front_end_assets/imgs/theme/icons/icon-facebook-white.svg') }}"
                         alt="" /></a>
-                <a href="#"><img
-                        src="{{ asset('front_end_assets/imgs/theme/icons/icon-twitter-white.svg') }}"
+                <a href="#"><img src="{{ asset('front_end_assets/imgs/theme/icons/icon-twitter-white.svg') }}"
                         alt="" /></a>
                 <a href="#"><img
                         src="{{ asset('front_end_assets/imgs/theme/icons/icon-instagram-white.svg') }}"
@@ -720,8 +725,7 @@
                 <a href="#"><img
                         src="{{ asset('front_end_assets/imgs/theme/icons/icon-pinterest-white.svg') }}"
                         alt="" /></a>
-                <a href="#"><img
-                        src="{{ asset('front_end_assets/imgs/theme/icons/icon-youtube-white.svg') }}"
+                <a href="#"><img src="{{ asset('front_end_assets/imgs/theme/icons/icon-youtube-white.svg') }}"
                         alt="" /></a>
             </div>
             <div class="site-copyright">Copyright 2022 © Nest. All rights reserved. Powered by AliThemes.</div>
