@@ -16,6 +16,7 @@ class User extends Authenticatable
     protected $gaurded = [
 
     ];
+    protected $fillable = ['name', 'photo', 'status', 'phone', 'address'];
 
 
     protected $hidden = [

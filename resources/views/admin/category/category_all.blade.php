@@ -4,26 +4,26 @@
     <div class="page-content">
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-            <div class="breadcrumb-title pe-3">Brands</div>
+            <div class="breadcrumb-title pe-3">Categories</div>
             <div class="ps-3">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0 p-0">
                         <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">All Brands</li>
+                        <li class="breadcrumb-item active" aria-current="page">All Categories</li>
                     </ol>
                 </nav>
             </div>
             <div class="ms-auto">
                 <div class="btn-group">
-                    <a href="{{ route('admin.brand.add') }}">
+                    <a href="{{ route('admin.category.add') }}">
                         <button type="button" class="btn btn-primary">Add New</button>
                     </a>
                 </div>
             </div>
         </div>
         <!--end breadcrumb-->
-        <h6 class="mb-0 text-uppercase">Displaying All Brands Data</h6>
+        <h6 class="mb-0 text-uppercase">Displaying All Categories Data</h6>
         <hr />
         <div class="card">
             <div class="card-body">
@@ -32,23 +32,23 @@
                         <thead>
                             <tr>
                                 <th>Sr.</th>
-                                <th>Name</th>
+                                <th>Category Name</th>
                                 <th>Photo</th>
                                 <th>Actions</th>
 
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($brands as $key => $brand)
+                            @foreach ($categories as $key => $category)
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
-                                    <td>{{ $brand->name }}</td>
-                                    <td><img src="{{ url('upload/brand/' . $brand->image) }}" alt="brand image"
+                                    <td>{{ $category->name }}</td>
+                                    <td><img src="{{ url('upload/category/' . $category->image) }}" alt="brand image"
                                             style="width:50px;height:50px;"></td>
-                                    <td><a href="{{ route('admin.brand.edit', $brand->id) }}" class="btn btn-info"
+                                    <td><a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-info"
                                             style="margin-right: 8px">Edit</a><a
-                                            href="{{ route('admin.brand.delete', $brand->id) }}" class="btn btn-danger"
-                                            id="delete">Delete</a></td>
+                                            href="{{ route('admin.category.delete', $category->id) }}"
+                                            class="btn btn-danger" id="delete">Delete</a></td>
 
                                 </tr>
                             @endforeach

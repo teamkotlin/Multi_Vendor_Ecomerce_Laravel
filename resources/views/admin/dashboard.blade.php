@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="{{ asset('admin_assets/css/dark-theme.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin_assets/css/semi-dark.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin_assets/css/header-colors.css') }}" />
+    {{-- DataTables --}}
+    <link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
     {{-- Toaster --}}
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
     <title>Admin Dashboard</title>
@@ -164,6 +166,9 @@
     <script src="{{ asset('admin_assets/plugins/sparkline-charts/jquery.sparkline.min.js') }}"></script>
     <script src="{{ asset('admin_assets/plugins/jquery-knob/excanvas.js') }}"></script>
     <script src="{{ asset('admin_assets/plugins/jquery-knob/jquery.knob.js') }}"></script>
+    {{-- Data Tables --}}
+    <script src="{{ asset('admin_assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('admin_assets/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
     <script>
         $(function() {
             $(".knob").knob();
@@ -172,6 +177,9 @@
     <script src="{{ asset('admin_assets/js/index.js') }}"></script>
     <!--app JS-->
     <script src="{{ asset('admin_assets/js/app.js') }}"></script>
+    {{-- Sweet Alert --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="{{ asset('admin_assets/js/code.js') }}"></script>
     {{-- Toaster --}}
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
@@ -196,9 +204,7 @@
             }
         @endif
     </script>
-    {{-- Data Tables --}}
-    <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
-    <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+
 
 </body>
 

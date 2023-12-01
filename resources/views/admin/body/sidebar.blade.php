@@ -45,32 +45,49 @@
                 </li>
             </ul>
         </li>
-        <li class="menu-label">UI Elements</li>
         <li>
-            <a href="widgets.html">
-                <div class="parent-icon"><i class='bx bx-cookie'></i>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bx bx-category"></i>
                 </div>
-                <div class="menu-title">Widgets</div>
+                <div class="menu-title">Categories</div>
             </a>
+            <ul>
+                <li> <a href="{{ route('admin.category.all') }}"><i class="bx bx-right-arrow-alt"></i>All Categories</a>
+                </li>
+                <li> <a href="{{ route('admin.category.add') }}"><i class="bx bx-right-arrow-alt"></i>Add Category</a>
+                </li>
+            </ul>
         </li>
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class='bx bx-cart'></i>
+                <div class="parent-icon"><i class="bx bx-category"></i>
                 </div>
-                <div class="menu-title">eCommerce</div>
+                <div class="menu-title">Sub Categories</div>
             </a>
             <ul>
-                <li> <a href="ecommerce-products.html"><i class="bx bx-right-arrow-alt"></i>Products</a>
+                <li> <a href="{{ route('admin.sub_category.all') }}"><i class="bx bx-right-arrow-alt"></i>All
+                        SubCategories</a>
                 </li>
-                <li> <a href="ecommerce-products-details.html"><i class="bx bx-right-arrow-alt"></i>Product
-                        Details</a>
-                </li>
-                <li> <a href="ecommerce-add-new-products.html"><i class="bx bx-right-arrow-alt"></i>Add New
-                        Products</a>
-                </li>
-                <li> <a href="ecommerce-orders.html"><i class="bx bx-right-arrow-alt"></i>Orders</a>
+                <li> <a href="{{ route('admin.sub_category.add') }}"><i class="bx bx-right-arrow-alt"></i>Add
+                        SubCategory</a>
                 </li>
             </ul>
+        </li>
+        <li class="menu-label">Vendors</li>
+        <li>
+            <a href="{{ route('admin.vendors.active') }}">
+                <div class="parent-icon"><i class='lni lni-users'></i>
+                </div>
+                <div class="menu-title">Active Vendors</div>
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('admin.vendors.new') }}" class="has-arrow">
+                <div class="parent-icon"><i class='lni lni-users'></i>
+                </div>
+                <div class="menu-title">New Vendors</div>
+            </a>
+
         </li>
         <li>
             <a class="has-arrow" href="javascript:;">

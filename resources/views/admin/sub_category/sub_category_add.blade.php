@@ -11,11 +11,12 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <form method="POST" action="{{ route('admin.brand.store') }}" enctype="multipart/form-data">
+                                <form method="POST" action="{{ route('admin.sub_category.store') }}"
+                                    enctype="multipart/form-data">
                                     @csrf
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Brand Name</h6>
+                                            <h6 class="mb-0">SubCategory Name</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" class="form-control" name="name" required />
@@ -23,23 +24,16 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Brand Logo</h6>
+                                            <h6 class="mb-0">Category Name</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="file" class="form-control" id="uploadImage" name="photo"
-                                                required />
+                                            <select name="category_id" id="" class="form-control" required>
+                                                @foreach ($categories as $cat)
+                                                    <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0"></h6>
-                                        </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <img src="{{ url('upload/no_image.jpg') }}" alt="Admin"
-                                                style="width: 100px;height:100px;object-fit:contain" id="showImage">
-                                        </div>
-                                    </div>
-
                                     <div class="row">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9 text-secondary">

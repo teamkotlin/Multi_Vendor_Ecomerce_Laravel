@@ -11,11 +11,12 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <form method="POST" action="{{ route('admin.brand.store') }}" enctype="multipart/form-data">
+                                <form method="POST" action="{{ route('admin.category.store') }}"
+                                    enctype="multipart/form-data">
                                     @csrf
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Brand Name</h6>
+                                            <h6 class="mb-0">Category Name</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" class="form-control" name="name" required />
@@ -23,7 +24,7 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Brand Logo</h6>
+                                            <h6 class="mb-0">Category Image</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
                                             <input type="file" class="form-control" id="uploadImage" name="photo"

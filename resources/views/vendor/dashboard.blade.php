@@ -39,6 +39,12 @@
         <!--end header -->
         <!--start page wrapper -->
         <div class="page-wrapper">
+            @if (Auth::user()->status == 'inactive')
+                <div style="padding: 16px">
+                    <h4 class="text-danger">Your Vendor Account is not Active</h4><span class="text-warning">Wait for
+                        admin approval!</span>
+                </div>
+            @endif
             @yield('vendor')
         </div>
         <!--end page wrapper -->
